@@ -1,0 +1,37 @@
+{
+  "task": "NR-AR",
+  "feature_file": "tox21_nr_ar_features_adv.csv",
+  "model_artifacts": {
+    "scaler": "models\\nr_ar_scaler.joblib",
+    "xgb_model": "models\\nr_ar_xgb.json"
+  },
+  "operating_point_for_submission": {
+    "opt_metric": "f1",
+    "best_threshold": 0.6693482398986816,
+    "oof_precision": 0.8160919540229885,
+    "oof_recall": 0.461038961038961,
+    "oof_f1": 0.5892116182572614,
+    "oof_mcc": 0.6014956088118103,
+    "oof_balanced_accuracy": 0.7282173222460993,
+    "oof_confusion": {
+      "tp": 142,
+      "fp": 32,
+      "tn": 6918,
+      "fn": 166
+    }
+  },
+  "threshold_free_quality": {
+    "oof_roc_auc": 0.779037185835747,
+    "oof_average_precision": 0.4738335255296214
+  },
+  "predictions_file": "reports\\step19_predictions_with_best_threshold.csv",
+  "predictions_summary": {
+    "n_total": 7258,
+    "n_predicted_positive": 190,
+    "predicted_positive_rate": 0.02617801047120419
+  },
+  "notes": {
+    "cv": "StratifiedGroupKFold by Murcko scaffold; OOF probs used for threshold selection",
+    "why_oof": "Single global threshold selected on OOF to avoid per-fold thresholds"
+  }
+}
