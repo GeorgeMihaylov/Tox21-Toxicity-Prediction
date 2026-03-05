@@ -102,12 +102,9 @@ ROC-AUC для XGBoost с расширенными признаками окол
 
 Табличный артефакт: `reports/threshold_sweep_xgb_adv.csv`.
 
-## 8. Матрица ошибок (интерпретация)
-При пороге около **0.89** получаем режим high-confidence screening: очень мало ложных срабатываний (FP), но часть токсичных молекул пропускается (FN).
+## 8. Итоги
+При пороге около **0.89** получаем режим high-confidence screening: очень мало ложно-отрицательных срабатываний.
 
-<p align="center">
-  <img src="reports/figures/confusion_matrix_xgb_adv.png" alt="Confusion matrix" width="520"/>
-</p>
 
 ## 9. Структура репозитория
 - `src/`
